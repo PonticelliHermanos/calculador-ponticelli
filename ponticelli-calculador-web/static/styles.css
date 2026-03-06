@@ -1,0 +1,57 @@
+:root{
+  --bg:#0b1220;
+  --card:#0f172a;
+  --muted:#94a3b8;
+  --text:#e5e7eb;
+  --line:#243044;
+  --accent:#22c55e;
+  --warn:#f59e0b;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#050914, #0b1220 35%, #0b1220);color:var(--text)}
+.header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(7,12,24,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{height:36px;width:auto;border-radius:8px;background:#fff;padding:6px}
+.brand-title{font-weight:700;letter-spacing:.2px}
+.brand-sub{color:var(--muted);font-size:12px;margin-top:2px}
+.nav a{color:var(--text);text-decoration:none;margin-left:12px;padding:8px 10px;border-radius:10px;border:1px solid transparent}
+.nav a:hover{border-color:var(--line);background:rgba(255,255,255,.03)}
+.container{max-width:980px;margin:0 auto;padding:18px 16px 56px}
+.footer{position:fixed;bottom:0;left:0;right:0;padding:10px 16px;color:var(--muted);font-size:12px;background:rgba(7,12,24,.92);border-top:1px solid var(--line)}
+
+.card{background:rgba(15,23,42,.85);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.h1{font-size:20px;font-weight:800;margin:0 0 8px}
+.p{margin:0 0 14px;color:var(--muted);line-height:1.35}
+
+.steps{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.step{padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+.step.active{border-color:rgba(34,197,94,.45);color:var(--text)}
+
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:860px){.grid.two{grid-template-columns:1fr 1fr}}
+
+.btn{border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--text);padding:10px 12px;border-radius:14px;cursor:pointer;font-weight:700}
+.btn:hover{background:rgba(255,255,255,.06)}
+.btn.primary{background:rgba(34,197,94,.18);border-color:rgba(34,197,94,.35)}
+.btn.primary:hover{background:rgba(34,197,94,.25)}
+.btn.danger{background:rgba(239,68,68,.15);border-color:rgba(239,68,68,.35)}
+.btn.small{padding:8px 10px;font-size:12px;border-radius:12px}
+
+.input, select, textarea{width:100%;padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:rgba(2,6,23,.4);color:var(--text)}
+label{display:block;font-size:12px;color:var(--muted);margin:0 0 6px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+.table{width:100%;border-collapse:separate;border-spacing:0}
+.table th,.table td{border-bottom:1px solid var(--line);padding:10px 8px;vertical-align:top}
+.table th{font-size:12px;color:var(--muted);text-align:left}
+.muted{color:var(--muted)}
+.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+.badge.ok{border-color:rgba(34,197,94,.35);color:var(--text)}
+.badge.warn{border-color:rgba(245,158,11,.35);color:var(--text)}
+
+.hr{height:1px;background:var(--line);margin:14px 0}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:12px;white-space:pre-wrap;background:rgba(2,6,23,.55);border:1px solid var(--line);padding:12px;border-radius:16px}
+
+.notice{border-left:4px solid var(--warn);padding:10px 12px;background:rgba(245,158,11,.08);border-radius:14px;color:var(--text)}
+.error{border-left:4px solid var(--danger);padding:10px 12px;background:rgba(239,68,68,.08);border-radius:14px;color:var(--text)}
