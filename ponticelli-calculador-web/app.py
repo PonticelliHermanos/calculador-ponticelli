@@ -771,10 +771,10 @@ def main():
 
     _ensure_config()
 
-    port = int(os.environ.get("PORT", "8000"))
+    port = int(os.environ.get("PORT", 8000))
     host = os.environ.get("HOST", "0.0.0.0")
 
-    httpd = ThreadingHTTPServer((host, port), Handler)
+    httpd = ThreadingHTTPServer=HTTPServer(("0.0.0.0", port), Handler)
     print(f"Ponticelli Calculador corriendo en http://localhost:{port}")
     print(f"Config editable: {CONFIG_PATH}")
     if os.environ.get("ADMIN_PASSWORD"):
